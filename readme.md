@@ -1,3 +1,3 @@
-# Boilerplate of meteor project. 
+# Meteor notes app with test
 
-Basic meteor and react setups.
+A meteor app using test tools..Mocha and expect.js
