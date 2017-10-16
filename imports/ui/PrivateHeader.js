@@ -1,7 +1,8 @@
 import React from 'react';
 import { Accounts } from 'meteor/accounts-base';
+import { createContainer } from 'meteor/react-meteor-data';
 
-const PrivateHeader = (props) => {
+export const PrivateHeader = (props) => {
     // bu şekilde de olur 
     // const onLogout = () => {
     //     Accounts.logout();
@@ -16,7 +17,13 @@ const PrivateHeader = (props) => {
     );
 };
 
-export default PrivateHeader;
+export default createContainer(() => {
+    return {
+        handleLogout: () => Accounts.logout()
+    };
+}, PrivateHeader);
+
+// export default PrivateHeader;
 
 // export default class PrivateHeader extends Component {
 //     onLogout () {
