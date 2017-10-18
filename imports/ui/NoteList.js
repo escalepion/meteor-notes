@@ -3,15 +3,14 @@ import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 
 import { Notes } from '../api/notes';
-import NoteListHEader from './NoteListHeader';
+import NoteListHeader from './NoteListHeader';
 import NoteListItem from './NoteListItem';
 import NoteListEmptyItem from './NoteListEmptyItem';
 
 export const NoteList = (props) => {
     return (
         <div>
-            <NoteListHEader />
-          {console.log(props.notes)}
+            <NoteListHeader />
             {   
                 props.notes.length < 1 ?
                 <NoteListEmptyItem /> :
