@@ -4,7 +4,7 @@ import { createContainer } from 'meteor/react-meteor-data';
 
 export const NoteListHeader = (props) => {
     return (
-        <button onClick={() => props.meteorCall('notes.insert')}>Create Note</button>
+        <button onClick={() => {props.meteorCall('notes.insert');}}>Create Note</button>
     );
 };
 
