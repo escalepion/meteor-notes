@@ -6,7 +6,7 @@ import { createContainer } from 'meteor/react-meteor-data';
 export const NoteListItem = (props) => {
     return (
         <div onClick={() => {
-            Session.set('selectedNoteId', props.note._id);
+            props.Session.set('selectedNoteId', props.note._id);
         }}>
             <h5>{props.note.title || 'Untitled note'}</h5>
             {props.note.selected ? 'selected' : undefined}
